@@ -1,14 +1,16 @@
 'use strict';
 
-var total = 0;
+var openHours = ['6am','7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Total'];
+
+var body = document.getElementsByTagName('body')[0];
 
 function cookieShops (locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust) {
-  this.locationName = locationName,
-  this.minCustPerHour = minCustperHour,
-  this.maxCustPerHour = minCustPerHour,
-  this.avgCookiesperCust = avgCookiesperCust,
-  this.cookiesEveryHour = cookiesEveryHour,
-  this.totalDailySales = 0,
+  this.locationName = locationName;
+  this.minCustPerHour = minCustPerHour;
+  this.maxCustPerHour = minCustPerHour;
+  this.avgCookiesPerCust = avgCookiesPerCust;
+  this.cookiesEveryHour = cookiesEveryHour;
+  this.totalDailySales = 0;
   this.custEveryHour = [];
 };
 
