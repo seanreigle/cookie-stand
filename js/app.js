@@ -38,6 +38,21 @@ function cookieShops (minCust, maxCust, avgCookie, name) {
     body.appendChild(newUL);
   };
 };
+
+this.cookiesTable = function() {
+  var table = document.createElement('table');
+  body.appendChild(table);
+  var tableRow = document.createElement('tr');
+  table.appendChild(table);
+  var tableHeader = document.createElement('th');
+  tableRow.appendChild(tableHeader);
+  var tableCells = document.createElement('th');
+  tableCells.innerText = 'hours[i]';
+  for (var i = 0; i < storeHours.length + 1; i++)
+    var headerCells = document.createElement('th');
+
+};
+
 var shopsOne = new cookieShops(23, 65, 6.3,'1st and Pike');
 var shopsTwo = new cookieShops(3, 24, 1.2,'SeaTac Airport');
 var shopsThree = new cookieShops(11, 38, 3.7,'Seattle Center');
