@@ -5,6 +5,27 @@
     <title>Pat's Salmon Cookies</title>
   </head>
   <body>
+    <fieldset>
+      <legend>Store Information</legend>
+    <form action="index.html" method="get" id="store-form">
+      <ul>
+        <li>
+          <label for="storelocation">Store Location</label>
+          <input type="text" placeholder="Enter Store Location" value="" name="Store Location" id="storelocation"/>
+          <br />
+          <label for="minCustPerHour">Minimum Customers Per Hour</label>
+          <input type="text" placeholder="Minimum Customers" value="" name="Minimum Customers" id="minCustPerHour"/>
+          <br />
+          <label for="maxCustPerHour">Maximum Customers Per Hour</label>
+          <input type="text" placeholder="Maximum Customers" value="" name="Maximum Customers" id="maxCustPerHour"/>
+          <br />
+          <label for="avgCookiesPerCust">Average Amount of Cookies</label>
+          <input type="text" placeholder="Average Amount" value="" name="Average Amount of Cookies" id="avgcookies"/>
+      </li>
+    </ul>
+
+</form>
+</fieldset>
      <script src="js/app.js" charset="utf-8"></script>
   </body>
 </html>
