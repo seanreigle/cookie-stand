@@ -75,10 +75,10 @@ function submitForm(event) {
   event.preventDefault();
 
   var form = event.target;
-  var newStore = form.newstore.value;
-  var minimum = form.mincust.value;
-  var maximum = form.maxcust.value;
-  var average = form.avgcust.value;
+  var newStore = storeForm.newstore.value;
+  var minimum = storeForm.mincust.value;
+  var maximum = storeForm.maxcust.value;
+  var average = storeForm.avgcust.value;
   var addStore = new cookieShops(newStore, minimum, maximum, average);
   addStore.generateTableRow();
 };
