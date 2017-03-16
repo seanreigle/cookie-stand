@@ -3,29 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Pat's Salmon Cookies</title>
+    <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
   </head>
   <body>
-    <fieldset>
-      <legend>Store Information</legend>
-    <form action="index.html" method="get" id="store-form">
+    <table>
+
+    </table>
+  <header>
+    <img src="/Users/sereigle/codefellows/201/cookie-stand/images/salmon.png" alt="Salmon">
+      <h1>Pat's Salmon Cookies</h1>
+  </header>
+
+  <fieldset>
+    <form action="sales.html" method="get" id="storeForm">
       <ul>
         <li>
-          <label for="storelocation">Store Location</label>
-          <input type="text" placeholder="Enter Store Location" value="" name="Store Location" id="storelocation"/>
+        <label for="storename">Store Location</label>
+          <input type="text" placeholder="Enter Store Location" name="newstore" id="storename"/>
           <br />
-          <label for="minCustPerHour">Minimum Customers Per Hour</label>
-          <input type="text" placeholder="Minimum Customers" value="" name="Minimum Customers" id="minCustPerHour"/>
+        <li>
+          <label for="mincust">Minimum Customers Per Hour</label>
+          <input type="number" placeholder="Minimum Customers" name="mincust" id="mincust"/>
           <br />
-          <label for="maxCustPerHour">Maximum Customers Per Hour</label>
-          <input type="text" placeholder="Maximum Customers" value="" name="Maximum Customers" id="maxCustPerHour"/>
+        <li>
+          <label for="maxcust">Maximum Customers Per Hour</label>
+          <input type="number" placeholder="Maximum Customers" name="maxcust" id="maxcust"/>
           <br />
-          <label for="avgCookiesPerCust">Average Amount of Cookies</label>
-          <input type="text" placeholder="Average Amount" value="" name="Average Amount of Cookies" id="avgcookies"/>
+        <li>
+          <label for="avgcust">Average Amount of Cookies</label>
+          <input type="number" placeholder="Average Amount"
+          name="avgcust" id="avgcust"/>
+
       </li>
     </ul>
-
+<input type="Submit" value="Submit" name="createstore">
 </form>
 </fieldset>
+
      <script src="js/app.js" charset="utf-8"></script>
+     <link rel="stylesheet" href="css/styles.css">
+
   </body>
 </html>
