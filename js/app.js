@@ -70,18 +70,22 @@ function createTable() {
   tableBody.id = 'table-body';
 };
 
-createTable();
+var storeForm = document.getElementById('storeForm');
+function submitForm(event) {
+  event.preventDefault();
 
+  var form = event.target;
+  var newStore = form.newstore.value;
+  var minimum = form.mincust.value;
+  var maximum = form.maxcust.value;
+  var average = form.avgcust.value;
+  var addStore = new cookieShops(newStore, minimum, maximum, average);
+  addStore.generateTableRow();
+};
+
+storeForm.addEventListener('submit', submitForm);
+
+createTable();
 for (var i = 0; i < allStores.length; i++) {
   allStores[i].generateTableRow();
-}
-
-var form = document.getElementById('store-form');
-function alertTheUser(event){
-  event.preventDefault(); // stops the form from submitting and leaving the page.
-  // time for the harvest
-  var theFormItself = event.target;
-  // the "elements" attribute of the event.target object holds (for a form) all of the form fields by name
-  console.log(theFormItself.elements['firstname'].value);
 };
-form.addEventListener('submit', alertTheUser);
