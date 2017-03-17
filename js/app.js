@@ -38,14 +38,15 @@ function cookieShops (minCust, maxCust, avgCookie, name) {
     var nameTD = document.createElement('th');
     nameTD.innerText = this.name;
     tRow.appendChild(nameTD);
-    var total = document.createElement('td');
-    total.innerText = this.total;
-    tRow.appendChild(total);
+
     for (var i = 0; i < storeHours.length - 1; i++) {
       var nameTD = document.createElement('td');
       nameTD.innerText = this.salesArray[i];
       tRow.appendChild(nameTD);
     }
+    var total = document.createElement('td');
+    total.innerText = this.total;
+    tRow.appendChild(total);
   };
   allStores.push(this);
 }
@@ -71,9 +72,9 @@ function createTable() {
 };
 
 var storeForm = document.getElementById('storeForm');
+
 function submitForm(event) {
   event.preventDefault();
-
   var form = event.target;
   var newStore = storeForm.newstore.value;
   var minimum = storeForm.mincust.value;
@@ -86,6 +87,7 @@ function submitForm(event) {
 storeForm.addEventListener('submit', submitForm);
 
 createTable();
+
 for (var i = 0; i < allStores.length; i++) {
   allStores[i].generateTableRow();
 };
