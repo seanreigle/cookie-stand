@@ -91,3 +91,25 @@ createTable();
 for (var i = 0; i < allStores.length; i++) {
   allStores[i].generateTableRow();
 };
+
+function createTotalsRow () {
+  var table = document.getElementsByTagName('table')[0];
+  body.appendChild(table);
+  var tFoot = document.createElement('tfoot');
+  table.appendChild(tFoot);
+  var tRow = document.createElement('tr');
+  tFoot.appendChild(tRow);
+  var totalsTH = document.createElement('th');
+  totalsTH.innerText = 'Totals';
+  tRow.appendChild(totalsTH);
+  for (var i = 0; i < storeHours.length - 1; i++) {
+    var sumHours = 0;
+    for (var k = 0; k < allStores.length; k++) {
+      sumHours += allStores[k].salesArray[i];
+    }
+    var footerTH = document.createElement('th');
+    footerTH.innerText = sumHours;
+    tRow.appendChild(footerTH);
+  }
+};
+createTotalsRow();
